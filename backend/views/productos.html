@@ -10,13 +10,13 @@
     </head>
     <body>
         <div class="contenedor-productos">
-            <form method="POST" id="form">
+            <form method="POST" class="form" id="form">
                 
-                <label id="tittle">Registro de Productos</label>
+                <label class="form" id="tittle">Registro de Productos</label>
                 <br></br>
-                <input class="inputs" type="text" name="nombre_producto" id="Producto" placeholder="Nombre del Producto" required="">
+                <input class="inputs" type="text" name="nombre_producto" id="nombre" placeholder="Nombre del Producto" required="">
                 <br></br>
-                <input class="inputs" type="text" name="id_producto" id="ID" placeholder="ID del Producto" required="">
+                <input class="inputs" type="text" name="id_producto" id="id" placeholder="ID del Producto" required="">
                 <br></br>
                 <input class="inputs" type="text" name="precio_producto" id="precio" placeholder="Precio del Producto" required="">
                 <br></br>
@@ -26,13 +26,15 @@
                 <br></br>
                 <input class="inputs" type="file" name="imagen_producto" id="imagen" placeholder="Imagen del Producto" required="">
                 <br></br>
-                <button type="button"class="bottons" id="guardar">Guardar</button>
-                <button type="button"class="bottons">Cancelar</button>
+                <button type="submit"class="bottons" id="guardar">Guardar</button>
+                <button type="reset"class="bottons">Cancelar</button>
                 <p class="nombre">Martin Procopio</p>
                 
-                
+                <a href="productos.html"></a>
             </form>
             
         </div>
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <script src="../../assets/js/validaciones.js" type="text/javascript"></script>
     </body>
 </html>
