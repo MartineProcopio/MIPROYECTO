@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-#form{
+#form, #form_productos{
     width: 400px;
     background: #003333;
     padding: 20px;

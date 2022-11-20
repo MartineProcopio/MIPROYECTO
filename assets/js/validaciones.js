@@ -3,9 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/javascript.js to edit this template
  */
 
-/*$(document).ready(function(){
+$(document).ready(function(){
    alert('Listo'); 
-});*/
+});
 
 $("#form").submit(function(){
     
@@ -18,7 +18,7 @@ $("#form").submit(function(){
     return true;
 });
 
-$("#form").submit(function(){
+$("#form_productos").submit(function(){
     
     var nombre = $("#nombre").val();
     var id = $("#id").val();
