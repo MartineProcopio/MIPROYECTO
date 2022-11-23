@@ -2,41 +2,35 @@
 
 <html>
     <head>
-        <title>Lista de Productos</title>
+        <title>Lista de Categorias</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../../assets/css/estilos.css"/>
     </head>
     <body>
     <center>
-        <div> Lista de Productos
+        <div> Lista de Categorias
             <table>
                 <thead>
                     <tr>
                         <th>ID</th>
                         <th>NOMBRE</th>
-                        <th>DESCRIPCION</th>
-                        <th>PRECIO</th>
-                        <th>CATEGORIA ID</th>
                         
                     </tr>
                 </thead>
                 
                 <tbody>
-                    <?php foreach ($listar_ctg as listarategorias) { ?>
+                    <?php foreach ($listar_ctg as $listarCategorias) { ?>
                     <tr>
-                        <td><?php echo $listaProductos['id']?></td>
-                        <td><?php echo $listaProductos['nombre_producto']?></td>
-                        <td><?php echo $listaProductos['descripcion']?></td>
-                        <td><?php echo $listaProductos['precio']?></td>
-                        <td><?php echo $listaProductos['categoria_id']?></td>
+                        <td><?php echo $listaCategorias['id']?></td>
+                        <td><?php echo $listaCategorias['nombre_categoria']?></td>
                     </tr>
                     <?php } ?>
                 </tbody>
             </table>  
             
         </div>  
-        <a href="productos.php?add">Agregar</a>
+        <a href="categorias.php?add">Agregar</a>
         <p>Martin Procopio</p>
        
     </center>
