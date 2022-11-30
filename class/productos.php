@@ -50,7 +50,7 @@ class productos{
         $resp = $db->insert("productos","nombre_productos=?, descripcion=?,precio=?,categoria_id","?,?,?,?",
                 array($this->nombre,$this->descripcion,$this->nombreprecio,$this->categoria));
     }
-    public function listar() {
+    static public function listar() {
         $db = new base_datos("mysql","miproyecto","127.0.0.1","root","");
         return $db->select('productos');
     }

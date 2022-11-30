@@ -23,7 +23,8 @@
                 </thead>
                 
                 <tbody>
-                    <?php foreach ($listar_ctg as listarategorias) { ?>
+                    
+                <?php foreach ($lista_pro as $listaProductos) { ?>
                     <tr>
                         <td><?php echo $listaProductos['id']?></td>
                         <td><?php echo $listaProductos['nombre_producto']?></td>
@@ -32,7 +33,8 @@
                         <td><?php echo $listaProductos['categoria_id']?></td>
                     </tr>
                     <?php } ?>
-                </tbody>
+                </tbody>    
+                
             </table>  
             
         </div>  

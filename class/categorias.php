@@ -15,7 +15,7 @@ class Categorias{
         
         if($id!=null){
             $db = new base_datos("mysql","miproyecto","127.0.0.1","root","");
-            $resp = $db->select("categoria", "id=", array($id));
+            $resp = $db->select("categoria", "id=?", array($id));
             
             if(isset($resp[0]['id'])){
             
@@ -67,15 +67,6 @@ class Categorias{
     static public function listar() {
         $db = new base_datos("mysql","miproyecto","127.0.0.1","root","");
         return $db->select("categoria");
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-            
+    }            
             
 }
