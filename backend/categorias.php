@@ -19,6 +19,8 @@ if(isset($_POST['accion']) && $_POST['accion']=='guardar') {
     
 }else if(isset($_GET['add'])) {
     include 'views/categorias.html';
+
+    
     die();
 }
 $lista_ctg = Categorias::listar();

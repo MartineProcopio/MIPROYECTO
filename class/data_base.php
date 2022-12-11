@@ -8,7 +8,7 @@
   
 try {
         $conector = new PDO("mysql:dbname=miproyecto;host=127.0.0.1","root","");
-        echo "coneccion exitosa";
+        
 } catch (Exception $ex) {
     echo "Fallo de coneccion".$ex->getMessage();
     
@@ -63,13 +63,13 @@ class base_datos {
    function insert($tabla,$campos,$valores,$arr_prepare=null){
     $sql = "insert into".$tabla."(".$campos.") values ($valores)";
     
-    $resouce = $this->gbd->prepare($sql);
-    $resouce->excecute($arr_prepare);
-    if($resouce){
+    $resource = $this->gbd->prepare($sql);
+    $resource->excecute($arr_prepare);
+    if($resource){
         return $this->gbd->lastInsertID();
     } else {
         echo '<pre>';
-        print_r($resouce->errorInfo());
+        print_r($resource->errorInfo());
         echo '</pre>';
         throw Exception("No se pudo Realizar la consulta de selccion");
     }    

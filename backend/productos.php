@@ -21,7 +21,7 @@ if(isset($_POST['accion']) && $_POST['accion']=='guardar') {
     $miCategoria->guardar();
     
 }elseif (isset ($_GET['add'])) {
-    include 'views/lista_productos.html';
+    include 'views/productos.html';
     die();
 }
 $lista_pro = productos::listar();

@@ -1,15 +1,59 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<html lang="es">
+
+<head>
+    <title>Home store</title>   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/estilos.css"/>
+</head>
+
+  <header>
+    <div class="img_logo" align="center">
+      <img src="assets/img/descarga.png" alt="logo de teclab">
+    </div>
+  </header>
+<body>
+    <div style="text-align: center; margin-top: 50px; margin-bottom: -100px;font-size: 35px;"><b> Productos </b></div>
+    <div>
+        <table  class="tabla_categorias" style="margin: 90px auto; width: 900px; text-align: center; margin-block: auto;">
+    
+    <tbody >
+      <tr>
+        <?php foreach ($lp as $indice => $producto){ ?>
+          <td style="padding: 0;border: solid 1px black; width: 1000px;margin-top: -10px;"> <?php echo 'Cat '.$producto["categoria_id"]?>
+              <br> 
+             <?php echo $producto["nombre_producto"]?>
+             <br>    
+             <?php echo $producto["descripcion"]?><br>
+             <br>
+             
+          </td>
+              <br>
+              
+              <?php $cat = new Categorias($producto["categoria_id"])?>
+              <?php echo $cat->nombre?>
+              
+        
+            <?php if(($indice + 1) % 4 == 0) {?>
+      </tr>
+        <tr>
+          <?php } } ?>    
+        </tr>
+        
+        <tr>
+            <td style="padding: 0;border: solid 1px black; width: 1000px"><img src="assets/img/zapatos.jpg" alt="zapatos" style="width: 200px"/></td><br>
+            <td style="padding: 0;border: solid 1px black; width: 1000px"><img src="assets/img/zapatos2.jpg" alt="zapatos"style="width: 200px"/></td><br>
+            <td style="padding: 0;border: solid 1px black; width: 1000px"><img src="assets/img/billetera1.jpg" alt="zapatos"style="width: 200px"/></td><br>
+            <td style="padding: 0;border: solid 1px black; width: 1000px"><img src="assets/img/billetera2.jpg" alt="zapatos" style="width: 200px"/></td><br>
+        </tr>  
+      
+    </tbody>
+  </table>
+ </div>       
+
+</body>
+
+
+
 </html>
